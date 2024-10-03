@@ -89,6 +89,41 @@ $mascara = 3; // Binario 0011</pre></td>
                         ?></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td>!!!true</td>
+                    <td class="respuesta"><?php
+                        var_dump(!!!true);
+                        ?></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>!(null ?? false || 5 < 10)</td>
+                    <td class="respuesta"><?php
+                        var_dump(!(null ?? false || 5 < 10));
+                        ?></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>$value = 3 > 2 && 5 == 4 || !true || !false</td>
+                    <td class="respuesta"><?php
+                        var_dump($value = 3 > 2 && 5 == 4 || !true || !false);
+                        ?></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>$e = true || $x = 'foo'</td>
+                    <td class="respuesta"><?php
+                        var_dump($e = true || $x = 'foo');
+                        ?></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>"es " . (5 > 10 ? "verdad" : "mentira")</td>
+                    <td class="respuesta"><?php
+                        var_dump("es " . (5 > 10 ? "verdad" : "mentira"));
+                        ?></td>
+                </tr>
+                <tr>
                     <td><pre>$car1 = 'supercali';
 $car2 = 'fragilistico';</pre></td>
                     <td>$car1 .= $car2 .= 'espialidoso'</td>
@@ -146,7 +181,7 @@ $tiene_efectivo = false</pre></td>
                 <tr>
                     <td></td>
                     <td>1/0 || true</td>
-                    <td class="respuesta"><?php // var_dump( 1 / 0 || true);    ?></td>
+                    <td class="respuesta"><?php // var_dump( 1 / 0 || true);      ?></td>
                 </tr>
                 <tr>
                     <td></td>
