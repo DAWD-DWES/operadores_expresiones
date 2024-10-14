@@ -44,13 +44,13 @@
                         ?></td>
                 </tr>
                 <tr>
-                    <td><pre>$base = 2;
+                    <td><pre>$base = 64;
 $exponente = 6</pre></td>
-                    <td>$base ** $exponent / 2</td>
+                    <td>$base / 2 ** $exponent</td>
                     <td class="respuesta"><?php
-                        $base = 2;
+                        $base = 64;
                         $exponent = 6;
-                        var_dump($base ** $exponent / 2);
+                        var_dump($base / 2 ** $exponent);
                         ?></td>
                 </tr>
                 <tr>
@@ -181,7 +181,7 @@ $tiene_efectivo = false</pre></td>
                 <tr>
                     <td></td>
                     <td>1/0 || true</td>
-                    <td class="respuesta"><?php // var_dump( 1 / 0 || true);      ?></td>
+                    <td class="respuesta"><?php // var_dump( 1 / 0 || true);       ?></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -202,22 +202,35 @@ $tiene_efectivo = false</pre></td>
                         ?></td>
                 </tr>
                 <tr>
-                    <td>$ruta1 = 'C:/';</td>
-                    <td>$ruta1 ?: '/'</td>
+                    <td>$ruta1 = '';</td>
+                    <td>$ruta1 ?: 'C:/'</td>
                     <td class="respuesta"><?php
-                        $ruta1 = 'C:/';
-                        var_dump($ruta1 ?: '/');
+                        $ruta1 = '';
+                        var_dump($ruta1 ?: 'C:/');
                         ?></td>
                 </tr>
                 <tr>
-                    <td>$ruta2 = null;</td>
-                    <td>$ruta2 ?? '/'</td>
+                    <td>$ruta2 no definida</td>
+                    <td>$ruta2 ?: 'C:/'</td>
                     <td class="respuesta"><?php
-                        $ruta2 = null;
-                        var_dump($ruta2 ?? '/');
+                        var_dump($ruta2 ?: 'C:/');
                         ?></td>
                 </tr>
-
+                <tr>
+                    <td>$ruta3 = null;</td>
+                    <td>$ruta3 ?? '/'</td>
+                    <td class="respuesta"><?php
+                        $ruta3 = null;
+                        var_dump($ruta3 ?? '/');
+                        ?></td>
+                </tr>
+                <tr>
+                    <td>$ruta4 no definida</td>
+                    <td>$ruta4 ?? '/'</td>
+                    <td class="respuesta"><?php
+                        var_dump($ruta4 ?? '/');
+                        ?></td>
+                </tr>
                 <tr>
                     <td>$dia = 'Lunes';</td>
                     <td><pre>match ($dia) {
