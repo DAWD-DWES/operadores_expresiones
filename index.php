@@ -181,7 +181,7 @@ $tiene_efectivo = false</pre></td>
                 <tr>
                     <td></td>
                     <td>1/0 || true</td>
-                    <td class="respuesta"><?php // var_dump(1 / 0 || true); ?></td>
+                    <td class="respuesta"><?php //  var_dump(1 / 0 || true); ?></td>
                 </tr>
                 <tr>
                     <td></td>
